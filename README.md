@@ -74,14 +74,15 @@ npm install
 
 ### 3. Récupérer et lancer le backend
 
-Le backend de test est fourni dans un dépôt séparé par OpenClassrooms.
-Depuis le dossier parent du frontend :
+Le backend de test est fourni séparément par
+[OpenClassrooms](https://github.com/OpenClassrooms-Student-Center/TesteurLogiciel_appli_location_immobiliere_React).
+Clone-le dans le même dossier parent que le frontend :
 
 ```bash
 git clone https://github.com/OpenClassrooms-Student-Center/TesteurLogiciel_appli_location_immobiliere_React.git ../kasa-backend
 ```
 
-Dans un premier terminal :
+Dans un premier terminal, lance l'API :
 
 ```bash
 cd ../kasa-backend/backend
@@ -97,10 +98,10 @@ http://localhost:8080/api/properties
 
 ### 4. Lancer le frontend
 
-Dans un second terminal :
+Dans un second terminal, retourne dans le dossier cloné du frontend :
 
 ```bash
-cd ../kasa
+cd /chemin/vers/kasa
 npm run dev
 ```
 
