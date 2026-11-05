@@ -1,0 +1,20 @@
+.banner {
+  min-height: 223px;
+  margin: 20px 0;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/banner-home.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 36px;
+  margin: 0;
+}
