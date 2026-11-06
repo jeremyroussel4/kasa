@@ -1,0 +1,58 @@
+.collapse__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #ff6060;
+  font: inherit;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.collapse__chevron {
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(135deg) translate(-3px, 3px);
+  transition: transform 0.2s ease;
+}
+
+.collapse--open .collapse__chevron {
+  transform: rotate(-45deg) translate(-3px, 3px);
+}
+
+.collapse__content {
+  padding: 24px 18px;
+  background-color: #f6f6f6;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.collapse__content p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .collapse__button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .collapse__chevron {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+
+  .collapse__content {
+    padding: 18px 12px;
+    font-size: 12px;
+  }
+}

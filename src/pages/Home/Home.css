@@ -1,0 +1,29 @@
+.home {
+  width: min(100% - 80px, 1240px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 50px;
+}
+
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 60px;
+  padding: 56px 50px;
+  margin-top: 40px;
+  border-radius: 25px;
+  background-color: #f6f6f6;
+}
+
+@media (max-width: 768px) {
+  .home {
+    width: min(100% - 40px, 600px);
+  }
+
+  .property-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    background-color: transparent;
+  }
+}

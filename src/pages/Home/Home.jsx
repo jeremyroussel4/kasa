@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { getProperties } from "../../api/properties";
 import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
+import "./Home.css";
+import bannerHome from "../../assets/banner-home.jpg";
 
 function Home() {
   const [properties, setProperties] = useState([]);
@@ -30,7 +32,10 @@ function Home() {
 
   return (
     <main className="home">
-      <Banner title="Chez vous, partout et ailleurs" />
+      <Banner
+        image={bannerHome}
+        title="Chez vous, partout et ailleurs"
+      />
       
       <div className="property-list">
         {properties.map((property) => (

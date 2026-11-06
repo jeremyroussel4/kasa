@@ -1,3 +1,5 @@
+import "./Card.css";
+
 function Card({ property }) {
   return (
     <article className="property-card">

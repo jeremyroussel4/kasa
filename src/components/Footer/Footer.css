@@ -1,0 +1,35 @@
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 66px 20px 30px;
+  color: #fff;
+  background-color: #000;
+}
+
+.site-footer img {
+  width: 122px;
+  filter: grayscale(1) brightness(0) invert(1);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    gap: 15px;
+    padding: 66px 20px 58px;
+  }
+
+  .site-footer p {
+    max-width: 130px;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+    white-space: normal;
+  }
+}

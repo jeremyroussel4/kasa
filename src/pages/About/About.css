@@ -1,0 +1,30 @@
+.about-page {
+  width: min(100% - 80px, 1240px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 30px;
+}
+
+.about-page .banner {
+  margin-top: 0;
+}
+
+.about-collapses {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: min(100% - 175px, 1025px);
+  margin: 30px auto 0;
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    width: min(100% - 40px, 600px);
+  }
+
+  .about-collapses {
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
