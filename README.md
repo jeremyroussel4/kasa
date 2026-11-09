@@ -29,7 +29,7 @@ Les fonctionnalités prévues sont notamment :
 - React
 - Vite
 - JavaScript
-- React Router (prévu)
+- React Router
 - CSS
 - API REST avec `fetch`
 - Git et GitHub
@@ -45,6 +45,9 @@ documents de suivi restent séparés du dépôt frontend.
 ├── public/
 ├── src/
 │   ├── assets/
+│   ├── components/
+│   │   ├── Banner/Banner.test.jsx
+│   │   └── Collapse/Collapse.test.jsx
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
@@ -87,7 +90,7 @@ Dans un premier terminal, lance l'API :
 ```bash
 cd ../kasa-backend/backend
 npm install
-node server.js
+npm start
 ```
 
 L'API est disponible à l'adresse :
@@ -122,13 +125,26 @@ npm run dev      # lancer le serveur de développement
 npm run build    # créer le build de production
 npm run preview  # prévisualiser le build de production
 npm run lint     # analyser le code avec Oxlint
+npm run test     # exécuter les tests unitaires
+npm run test:coverage # vérifier la couverture des tests
 ```
+
+## Tests
+
+Les tests unitaires utilisent Vitest et Testing Library.
+
+Les composants testés sont :
+
+- `Banner` : titre, image et absence de titre ;
+- `Collapse` : état fermé, ouverture et fermeture.
+
+La couverture des composants testés doit rester supérieure à 80 %.
 
 ## Compétences mises en pratique
 
 - création de composants React réutilisables ;
 - gestion des props et de l'état local ;
-- navigation avec React Router (prévue) ;
+- navigation avec React Router ;
 - récupération de données depuis une API REST ;
 - gestion des états de chargement et d'erreur ;
 - responsive design et animations CSS ;
