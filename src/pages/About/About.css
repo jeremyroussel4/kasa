@@ -5,10 +5,6 @@
   padding-bottom: 30px;
 }
 
-.about-page .banner {
-  margin-top: 0;
-}
-
 .about-collapses {
   display: flex;
   flex-direction: column;

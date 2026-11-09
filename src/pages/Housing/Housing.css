@@ -1,0 +1,136 @@
+.housing-page {
+  width: min(100% - 80px, 1240px);
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.housing-summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 25px 0 24px;
+}
+
+.housing-details h1 {
+  margin: 0 0 8px;
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.housing-location {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.housing-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.housing-tags span {
+  min-width: 115px;
+  padding: 4px 12px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #ff6060;
+  font-size: 14px;
+  text-align: center;
+}
+
+.housing-host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-width: 180px;
+}
+
+.housing-host__identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff6060;
+  font-size: 18px;
+  text-align: right;
+}
+
+.housing-host__identity img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.housing-rating {
+  display: flex;
+  gap: 5px;
+  color: #e3e3e3;
+  font-size: 24px;
+}
+
+.housing-rating .is-active {
+  color: #ff6060;
+}
+
+.housing-collapses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 75px;
+}
+
+.housing-collapses ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .housing-page {
+    width: min(100% - 40px, 600px);
+  }
+
+  .housing-summary {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .housing-details h1 {
+    font-size: 24px;
+  }
+
+  .housing-location {
+    font-size: 14px;
+  }
+
+  .housing-tags span {
+    min-width: 84px;
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+
+  .housing-host {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .housing-host__identity {
+    font-size: 14px;
+  }
+
+  .housing-host__identity img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .housing-rating {
+    font-size: 18px;
+  }
+
+  .housing-collapses {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -15,6 +15,11 @@
 body {
   margin: 0;
 }
+/* pour éviter le décalage de la page lors 
+de l'apparition de la barre de défilement */
+html {
+  scrollbar-gutter: stable;
+}
 
 h1,
 h2,

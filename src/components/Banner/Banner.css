@@ -1,6 +1,6 @@
 .banner {
-  min-height: 223px;
-  margin: 20px 0;
+  height: 223px; /* hauteur fixe de la bannière */
+  margin: 20px 0; 
   border-radius: 25px;
   display: flex;
   align-items: center;
@@ -14,4 +14,14 @@
   color: white;
   font-size: 36px;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .banner { 
+    height: 111px; /* hauteur fixe de la bannière */
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
 }

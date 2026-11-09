@@ -29,13 +29,31 @@
 }
 
 .collapse__content {
-  padding: 24px 18px;
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
   background-color: #f6f6f6;
-  font-size: 18px;
-  line-height: 1.4;
+  transition: grid-template-rows 0.35s ease;
 }
 
-.collapse__content p {
+.collapse__content-inner {
+  min-height: 0;
+  padding: 0 18px;
+  font-size: 18px;
+  line-height: 1.4;
+  transition: padding 0.35s ease;
+}
+
+.collapse--open .collapse__content {
+  grid-template-rows: 1fr;
+}
+
+.collapse--open .collapse__content-inner {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.collapse__content-inner p {
   margin: 0;
 }
 
@@ -52,7 +70,16 @@
   }
 
   .collapse__content {
-    padding: 18px 12px;
     font-size: 12px;
+  }
+
+  .collapse__content-inner {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .collapse--open .collapse__content-inner {
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 }

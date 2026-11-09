@@ -14,7 +14,9 @@ function Collapse({ title, children }) {
         <span>{title}</span>
         <span className="collapse__chevron" aria-hidden="true" />
       </button>
-      {isOpen && <div className="collapse__content">{children}</div>}
+      <div className="collapse__content">
+        <div className="collapse__content-inner">{children}</div>
+      </div>
     </section>
   );
 }
