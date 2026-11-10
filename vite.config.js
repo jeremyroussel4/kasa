@@ -12,6 +12,7 @@ export default defineConfig({
       include: [
         'src/components/Banner/Banner.jsx',
         'src/components/Collapse/Collapse.jsx',
+        'src/components/Gallery/Gallery.jsx',
       ],
       thresholds: {
         lines: 80,

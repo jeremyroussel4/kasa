@@ -47,7 +47,8 @@ documents de suivi restent séparés du dépôt frontend.
 │   ├── assets/
 │   ├── components/
 │   │   ├── Banner/Banner.test.jsx
-│   │   └── Collapse/Collapse.test.jsx
+│   │   ├── Collapse/Collapse.test.jsx
+│   │   └── Gallery/Gallery.test.jsx
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
@@ -137,8 +138,11 @@ Les composants testés sont :
 
 - `Banner` : titre, image et absence de titre ;
 - `Collapse` : état fermé, ouverture et fermeture.
+- `Gallery` : affichage initial, navigation entre les photos et masquage
+  des boutons lorsqu'il n'y a qu'une photo.
 
-La couverture des composants testés doit rester supérieure à 80 %.
+La couverture des composants testés doit rester supérieure à 80 %. Le
+rapport détaillé est généré dans le dossier `coverage/`.
 
 ## Compétences mises en pratique
 
