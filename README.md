@@ -3,7 +3,7 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES2022-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
-[![Status](https://img.shields.io/badge/Status-In%20progress-orange?style=for-the-badge)](https://github.com/jeremyroussel4/kasa)
+[![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](https://github.com/jeremyroussel4/kasa)
 
 ## À propos du projet
 
@@ -46,9 +46,19 @@ documents de suivi restent séparés du dépôt frontend.
 ├── src/
 │   ├── assets/
 │   ├── components/
-│   │   ├── Banner/Banner.test.jsx
-│   │   ├── Collapse/Collapse.test.jsx
-│   │   └── Gallery/Gallery.test.jsx
+│   │   ├── Banner/
+│   │   ├── Card/
+│   │   ├── Collapse/
+│   │   ├── Footer/
+│   │   ├── Gallery/
+│   │   └── Header/
+│   ├── api/
+│   ├── pages/
+│   │   ├── About/
+│   │   ├── Error/
+│   │   ├── Home/
+│   │   └── Housing/
+│   ├── router/
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
@@ -67,7 +77,7 @@ documents de suivi restent séparés du dépôt frontend.
 
 ```bash
 git clone git@github.com:jeremyroussel4/kasa.git
-cd kasa
+cd kasa/front
 ```
 
 ### 2. Installer les dépendances du frontend
@@ -91,7 +101,7 @@ Dans un premier terminal, lance l'API :
 ```bash
 cd ../kasa-backend/backend
 npm install
-npm start
+node server.js
 ```
 
 L'API est disponible à l'adresse :
@@ -100,12 +110,19 @@ L'API est disponible à l'adresse :
 http://localhost:8080/api/properties
 ```
 
+Le frontend utilise cette adresse par défaut. Pour utiliser une autre
+API, crée un fichier `.env.local` dans `front/` :
+
+```env
+VITE_API_URL=https://example.com/api/properties
+```
+
 ### 4. Lancer le frontend
 
 Dans un second terminal, retourne dans le dossier cloné du frontend :
 
 ```bash
-cd /chemin/vers/kasa
+cd /chemin/vers/kasa/front
 npm run dev
 ```
 
