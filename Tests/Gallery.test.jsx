@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import Gallery from "./Gallery";
+import Gallery from "../src/components/Gallery/Gallery";
 
 describe("Gallery", () => {
   it("affiche la première image au chargement", () => {

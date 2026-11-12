@@ -65,6 +65,10 @@ documents de suivi restent séparés du dépôt frontend.
 │   └── main.jsx
 ├── .gitignore
 ├── index.html
+├── Tests/
+│   ├── Banner.test.jsx
+│   ├── Collapse.test.jsx
+│   └── Gallery.test.jsx
 ├── package.json
 ├── package-lock.json
 ├── README.md
@@ -149,7 +153,7 @@ npm run test:coverage # vérifier la couverture des tests
 
 ## Tests
 
-Les tests unitaires utilisent Vitest et Testing Library.
+Les tests unitaires sont regroupés dans le dossier `Tests/`, conformément aux consignes du projet. Ils utilisent Vitest et Testing Library.
 
 Les composants testés sont :
 
