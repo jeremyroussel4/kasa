@@ -11,7 +11,7 @@ function Housing() {
   const navigate = useNavigate();
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     getProperties()
@@ -25,11 +25,11 @@ function Housing() {
         } else {
           setProperty(selectedProperty);
         }
-
-        setLoading(false);
       })
       .catch(() => {
-        setError("Impossible de récupérer le logement");
+        setError(true);
+      })
+      .finally(() => {
         setLoading(false);
       });
   }, [id, navigate]);
@@ -39,7 +39,7 @@ function Housing() {
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return <p>Impossible de récupérer le logement.</p>;
   }
 
   return (

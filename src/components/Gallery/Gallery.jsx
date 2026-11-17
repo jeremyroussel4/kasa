@@ -5,11 +5,11 @@ function Gallery({ pictures, title }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   function goToNextPicture() {
-    setCurrentIndex((currentIndex + 1) % pictures.length);
+    setCurrentIndex((index) => (index + 1) % pictures.length);
   }
 
   function goToPreviousPicture() {
-    setCurrentIndex((currentIndex - 1 + pictures.length) % pictures.length);
+    setCurrentIndex((index) => (index - 1 + pictures.length) % pictures.length);
   }
 
   return (

@@ -8,16 +8,17 @@ import bannerHome from "../../assets/banner-home.jpg";
 function Home() {
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     getProperties()
       .then((data) => {
         setProperties(data);
-        setLoading(false);
       })
-      .catch((error) => {
-        setError(error);
+      .catch(() => {
+        setError(true);
+      })
+      .finally(() => {
         setLoading(false);
       });
   }, []);
