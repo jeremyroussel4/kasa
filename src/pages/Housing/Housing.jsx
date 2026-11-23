@@ -14,6 +14,11 @@ function Housing() {
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
+    setError(false);
+    setNotFound(false);
+    setProperty(null);
+
     getProperties()
       .then((properties) => {
         const selectedProperty = properties.find(
