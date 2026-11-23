@@ -1,12 +1,8 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import Housing from "../src/pages/Housing/Housing";
 import Error from "../src/pages/Error/Error";
-
-afterEach(() => {
-  vi.restoreAllMocks();
-});
 
 describe("Housing", () => {
   it("redirige vers la page d'erreur pour un identifiant invalide", async () => {
