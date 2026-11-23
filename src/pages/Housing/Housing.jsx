@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { getProperties } from "../../api/properties";
 
 import Gallery from "../../components/Gallery/Gallery";
@@ -8,10 +8,10 @@ import "./Housing.css";
 
 function Housing() {
   const { id } = useParams();
-  const navigate = useNavigate();
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     getProperties()
@@ -21,7 +21,7 @@ function Housing() {
         );
 
         if (!selectedProperty) {
-          navigate("/error", { replace: true });
+          setNotFound(true);
         } else {
           setProperty(selectedProperty);
         }
@@ -32,7 +32,7 @@ function Housing() {
       .finally(() => {
         setLoading(false);
       });
-  }, [id, navigate]);
+  }, [id]);
 
   if (loading) {
     return <p>Chargement du logement...</p>;
@@ -40,6 +40,14 @@ function Housing() {
 
   if (error) {
     return <p>Impossible de récupérer le logement.</p>;
+  }
+
+  if (notFound) {
+    return <Navigate to="/error" replace />;
+  }
+
+  if (!property) {
+    return null;
   }
 
   return (
